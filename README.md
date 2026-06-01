@@ -1,5 +1,3 @@
-![EduKitt AI Free Edition dashboard](https://edukittai.com/product-images/edukitt-ai-dashbord-free-edition.png)
-
 # EduKitt AI — Free Edition
 
 **EduKitt AI** is a self-hosted, AI-powered learning platform. Turn any topic, document, or syllabus into structured courses, lessons, quizzes, and quick-learn cards — using the AI provider of your choice.
@@ -7,6 +5,8 @@
 This repository contains the **Free Edition** source code. A full-featured **Pro Edition** is also available at [edukittai.com](https://edukittai.com).
 
 **Live demo:** [https://edukittai.com/](https://edukittai.com/)
+
+![EduKitt AI Free Edition dashboard](https://edukittai.com/product-images/edukitt-ai-dashbord-free-edition.png)
 
 ---
 
