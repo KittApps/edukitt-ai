@@ -1,0 +1,20 @@
+.theme-nord {
+  --color-primary: #5e81ac;
+  --color-primary-container: #88c0d0;
+  --color-secondary: #81a1c1;
+  --color-secondary-container: #d8dee9;
+  --color-tertiary: #b48ead;
+  --color-error: #bf616a;
+  --color-error-container: #fecaca;
+
+  --color-surface: #eceff4;
+  --color-surface-dim: #d8dee9;
+  --color-surface-container: #c4ccd9;
+  --color-surface-container-low: #e5e9f0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #b9c2d3;
+  --color-on-surface: #2e3440;
+  --color-on-surface-variant: #4c566a;
+  --color-outline-variant: #8e95a3;
+  --color-surface-variant: #c4ccd9;
+}

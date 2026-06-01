@@ -1,0 +1,20 @@
+.theme-ocean {
+  --color-primary: #0e7490;
+  --color-primary-container: #67e8f9;
+  --color-secondary: #0369a1;
+  --color-secondary-container: #bae6fd;
+  --color-tertiary: #ea580c;
+  --color-error: #dc2626;
+  --color-error-container: #fecaca;
+
+  --color-surface: #f1fafd;
+  --color-surface-dim: #dceff5;
+  --color-surface-container: #c5e6ee;
+  --color-surface-container-low: #e8f6fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #aedae3;
+  --color-on-surface: #062b35;
+  --color-on-surface-variant: #2e5867;
+  --color-outline-variant: #7fb4c7;
+  --color-surface-variant: #aacfdb;
+}

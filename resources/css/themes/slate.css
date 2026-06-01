@@ -1,0 +1,20 @@
+.theme-slate {
+  --color-primary: #475569;
+  --color-primary-container: #cbd5e1;
+  --color-secondary: #4338ca;
+  --color-secondary-container: #c7d2fe;
+  --color-tertiary: #0e7490;
+  --color-error: #b91c1c;
+  --color-error-container: #fecaca;
+
+  --color-surface: #f8fafc;
+  --color-surface-dim: #e2e8f0;
+  --color-surface-container: #cbd5e1;
+  --color-surface-container-low: #e9eef5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #b6c2d3;
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;
+  --color-outline-variant: #94a3b8;
+  --color-surface-variant: #cbd5e1;
+}

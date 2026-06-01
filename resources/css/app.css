@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* App-side themes — each file scopes overrides under `.theme-<key>`. */
+@import "./themes/dark.css";
+@import "./themes/ocean.css";
+@import "./themes/forest.css";
+@import "./themes/sunset.css";
+@import "./themes/sepia.css";
+@import "./themes/slate.css";
+@import "./themes/solarized.css";
+@import "./themes/mint.css";
+@import "./themes/nord.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+
+  --color-primary: #6c3ce0;
+  --color-primary-container: #a478ff;
+  --color-secondary: #0e7490;
+  --color-secondary-container: #67e8f9;
+  --color-tertiary: #c2410c;
+  --color-error: #dc2626;
+  --color-error-container: #fecaca;
+  --color-surface: #f8f8ff;
+  --color-surface-dim: #eef0ff;
+  --color-surface-container: #e4e6f5;
+  --color-surface-container-low: #f0f1fc;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #d8daf0;
+  --color-on-surface: #1a1f36;
+  --color-on-surface-variant: #4b5068;
+  --color-outline-variant: #9da3bf;
+  --color-surface-variant: #c5c9e0;
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-sans text-on-surface antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .ai-glow {
+    box-shadow: 0 0 24px rgba(108, 60, 224, 0.12);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* react-day-picker — themed to match the design system. */
+/* Variables redeclared on .rdp-root because the package's own CSS resets them there. */
+.rdp-theme .rdp-root {
+  --rdp-accent-color: var(--color-primary);
+  --rdp-accent-background-color: rgba(108, 60, 224, 0.1);
+  --rdp-day-width: 26px;
+  --rdp-day-height: 26px;
+  --rdp-day_button-width: 26px;
+  --rdp-day_button-height: 26px;
+  --rdp-day_button-border-radius: 6px;
+  --rdp-day_button-border: 0 solid transparent;
+  --rdp-selected-border: 0 solid transparent;
+  --rdp-months-gap: 8px;
+  --rdp-nav_button-width: 22px;
+  --rdp-nav_button-height: 22px;
+  --rdp-nav-height: 24px;
+  --rdp-weekday-padding: 2px 0;
+  --rdp-weekday-text-transform: uppercase;
+  --rdp-range_middle-color: var(--color-on-surface);
+  --rdp-range_middle-background-color: rgba(108, 60, 224, 0.1);
+  --rdp-range_start-color: white;
+  --rdp-range_end-color: white;
+  --rdp-range_start-date-background-color: var(--color-primary);
+  --rdp-range_end-date-background-color: var(--color-primary);
+  --rdp-today-color: var(--color-tertiary);
+  --rdp-outside-opacity: 0.45;
+  --rdp-disabled-opacity: 0.35;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  margin: 0;
+}
+.rdp-theme .rdp-months {
+  flex-wrap: nowrap;
+}
+.rdp-theme .rdp-month {
+  flex-shrink: 0;
+}
+.rdp-theme .rdp-month_caption {
+  padding: 0 2px 4px;
+  height: 22px;
+  font-family: var(--font-headline);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+.rdp-theme .rdp-nav {
+  height: 22px;
+  gap: 2px;
+}
+.rdp-theme .rdp-button_previous,
+.rdp-theme .rdp-button_next {
+  border-radius: 6px;
+  color: var(--color-on-surface-variant);
+  background: transparent;
+  transition: background-color 0.15s;
+}
+.rdp-theme .rdp-button_previous:hover,
+.rdp-theme .rdp-button_next:hover {
+  background: var(--color-surface-container-low);
+  color: var(--color-on-surface);
+}
+.rdp-theme .rdp-chevron {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+.rdp-theme .rdp-weekdays {
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--color-on-surface-variant);
+}
+.rdp-theme .rdp-weekday {
+  font-weight: 700;
+  opacity: 1;
+}
+.rdp-theme .rdp-day {
+  font-size: 11px;
+  color: var(--color-on-surface);
+  padding: 0;
+}
+.rdp-theme .rdp-day_button {
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: inherit;
+  transition:
+    background-color 0.12s,
+    color 0.12s;
+}
+.rdp-theme .rdp-day_button:hover {
+  background: var(--color-surface-container-low);
+}
+.rdp-theme .rdp-today:not(.rdp-outside) .rdp-day_button {
+  color: var(--color-tertiary);
+  font-weight: 800;
+}
+.rdp-theme .rdp-outside {
+  opacity: var(--rdp-outside-opacity);
+}
+.rdp-theme .rdp-outside .rdp-day_button {
+  color: var(--color-outline-variant);
+  font-weight: 500;
+}
+.rdp-theme .rdp-selected {
+  font-size: inherit;
+  font-weight: 700;
+}
+.rdp-theme .rdp-selected .rdp-day_button {
+  color: white;
+  background: var(--color-primary);
+  border: none;
+}
+.rdp-theme .rdp-range_start,
+.rdp-theme .rdp-range_end {
+  background: revert;
+}
+.rdp-theme .rdp-range_start .rdp-day_button,
+.rdp-theme .rdp-range_end .rdp-day_button {
+  background: var(--color-primary);
+  color: white;
+  font-weight: 800;
+}
+.rdp-theme .rdp-range_middle {
+  background: rgba(108, 60, 224, 0.1);
+}
+.rdp-theme .rdp-range_middle .rdp-day_button {
+  background: transparent;
+  color: var(--color-on-surface);
+}
+.rdp-theme .rdp-disabled .rdp-day_button {
+  color: var(--color-outline-variant);
+  cursor: not-allowed;
+}
+
+/* Admin console shell: flat, (scoped to layout root). */
+.admin-app {
+  --font-headline: var(--font-sans);
+
+  --color-primary: #0972d3;
+  --color-primary-container: #033160;
+  --color-secondary: #545b64;
+  --color-secondary-container: #e9ebed;
+  --color-tertiary: #ec7211;
+
+  --color-surface: #f2f3f3;
+  --color-surface-dim: #e7e9e9;
+  --color-surface-container: #d5dbdb;
+  --color-surface-container-low: #eaeded;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #aab7b8;
+  --color-on-surface: #16191f;
+  --color-on-surface-variant: #545b64;
+  --color-outline-variant: #879596;
+  --color-surface-variant: #e9ebed;
+
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+}
+
+.admin-app .rounded-full {
+  border-radius: 0;
+}
+
+.admin-app .font-extrabold {
+  font-weight: 600;
+}
+
+.admin-app :is(.shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl) {
+  box-shadow: none;
+}
+
+/* react-day-picker: replace legacy purple range tint with admin primary */
+.admin-app .rdp-theme .rdp-range_middle {
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+.admin-app .rdp-theme .rdp-selected .rdp-day_button {
+  background: var(--color-primary);
+}
+

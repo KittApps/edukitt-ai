@@ -1,0 +1,20 @@
+.theme-solarized {
+  --color-primary: #268bd2;
+  --color-primary-container: #7eb6e0;
+  --color-secondary: #2aa198;
+  --color-secondary-container: #a5d4cf;
+  --color-tertiary: #b58900;
+  --color-error: #dc322f;
+  --color-error-container: #fecaca;
+
+  --color-surface: #fdf6e3;
+  --color-surface-dim: #eee8d5;
+  --color-surface-container: #e0d9c5;
+  --color-surface-container-low: #f3edd6;
+  --color-surface-container-lowest: #fffbf0;
+  --color-surface-container-high: #d3cdb8;
+  --color-on-surface: #073642;
+  --color-on-surface-variant: #586e75;
+  --color-outline-variant: #93a1a1;
+  --color-surface-variant: #d3cdb8;
+}

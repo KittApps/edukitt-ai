@@ -1,0 +1,482 @@
+/* =============================================================================
+   Installation Wizard - styles
+   ============================================================================= */
+
+:root {
+    --color-primary: #6c3ce0;
+    --color-primary-dark: #4a1fb8;
+    --color-primary-hover: #5a2fbf;
+    --color-secondary: #545b64;
+    --color-tertiary: #ec7211;
+
+    --color-success: #037f0c;
+    --color-success-bg: #d6f5d6;
+    --color-warning: #b25c00;
+    --color-warning-bg: #fff5e6;
+    --color-error: #d13212;
+    --color-error-bg: #ffe7e7;
+
+    --color-surface: #f2f3f3;
+    --color-surface-dim: #e7e9e9;
+    --color-surface-container: #d5dbdb;
+    --color-surface-container-low: #eaeded;
+    --color-surface-container-lowest: #ffffff;
+    --color-on-surface: #16191f;
+    --color-on-surface-variant: #545b64;
+    --color-outline: #879596;
+    --color-outline-variant: #aab7b8;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body.install-app {
+    margin: 0;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--color-surface);
+    color: var(--color-on-surface);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+}
+
+.wiz-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    gap: 16px;
+}
+
+/* ---------- Header ---------- */
+.wiz-header {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wiz-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.wiz-brand-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+.wiz-brand-title {
+    font-family: "Manrope", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-on-surface);
+    line-height: 1.2;
+}
+.wiz-brand-sub {
+    font-size: 12px;
+    color: var(--color-on-surface-variant);
+}
+
+/* ---------- Card ---------- */
+.wiz-card {
+    width: 100%;
+    max-width: 720px;
+    background: var(--color-surface-container-lowest);
+    border: 1px solid var(--color-surface-container);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Step indicator ---------- */
+.wiz-steps {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 24px;
+    background: var(--color-surface-container-low);
+    border-bottom: 1px solid var(--color-surface-container);
+    overflow-x: auto;
+}
+.wiz-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    color: var(--color-on-surface-variant);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.wiz-step + .wiz-step::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--color-outline-variant);
+    margin-right: 4px;
+}
+.wiz-step-num {
+    width: 22px;
+    height: 22px;
+    background: var(--color-surface-container);
+    color: var(--color-on-surface-variant);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+}
+.wiz-step--active .wiz-step-num {
+    background: var(--color-primary);
+    color: #fff;
+}
+.wiz-step--active .wiz-step-label {
+    color: var(--color-on-surface);
+}
+.wiz-step--done .wiz-step-num {
+    background: var(--color-primary-dark);
+    color: #fff;
+}
+
+/* ---------- Body ---------- */
+.wiz-body {
+    padding: 32px 32px 28px;
+}
+.wiz-step-content { display: flex; flex-direction: column; gap: 18px; }
+
+.wiz-h1 {
+    font-family: "Manrope", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+    color: var(--color-on-surface);
+}
+.wiz-lede {
+    margin: 0;
+    color: var(--color-on-surface-variant);
+    font-size: 14px;
+}
+
+/* ---------- Welcome ---------- */
+.wiz-welcome {
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 24px 8px 8px;
+}
+.wiz-welcome-logo {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+.wiz-welcome-title {
+    font-family: "Manrope", "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0;
+    color: var(--color-on-surface);
+    letter-spacing: -0.02em;
+}
+.wiz-welcome-tagline {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.wiz-welcome-text {
+    max-width: 480px;
+    margin: 8px 0 0;
+    color: var(--color-on-surface-variant);
+    font-size: 14px;
+    line-height: 1.6;
+}
+.wiz-welcome-meta {
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-on-surface-variant);
+    opacity: 0.8;
+}
+
+/* ---------- Callouts ---------- */
+.wiz-callout {
+    padding: 12px 14px;
+    background: var(--color-surface-container-low);
+    border-left: 3px solid var(--color-primary);
+    font-size: 13px;
+    color: var(--color-on-surface);
+}
+.wiz-callout--bad {
+    background: var(--color-error-bg);
+    border-left-color: var(--color-error);
+    color: var(--color-error);
+}
+.wiz-callout code {
+    background: rgba(0, 0, 0, 0.06);
+    padding: 1px 6px;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 12px;
+}
+
+/* ---------- Tables ---------- */
+.wiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    border: 1px solid var(--color-surface-container);
+}
+.wiz-table th, .wiz-table td {
+    padding: 9px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-surface-container);
+    vertical-align: top;
+}
+.wiz-table thead th {
+    background: var(--color-surface-container-low);
+    color: var(--color-on-surface-variant);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.wiz-table tbody tr:last-child td { border-bottom: none; }
+.wiz-table-meta {
+    color: var(--color-on-surface-variant);
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 12px;
+    width: 1%;
+    white-space: nowrap;
+}
+.wiz-table-status { width: 1%; white-space: nowrap; }
+.wiz-table-hint {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--color-on-surface-variant);
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+.wiz-row--bad td:first-child { color: var(--color-error); }
+
+/* ---------- Badges ---------- */
+.wiz-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.wiz-badge--ok   { background: var(--color-success-bg); color: var(--color-success); }
+.wiz-badge--fail { background: var(--color-error-bg);   color: var(--color-error); }
+.wiz-badge--warn { background: var(--color-warning-bg); color: var(--color-warning); }
+
+/* ---------- Forms ---------- */
+.wiz-form { display: flex; flex-direction: column; gap: 14px; }
+.wiz-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+.wiz-form-row { display: flex; flex-direction: column; gap: 4px; }
+.wiz-label    { font-weight: 600; font-size: 13px; color: var(--color-on-surface); }
+.wiz-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--color-outline-variant);
+    background: var(--color-surface-container-lowest);
+    color: var(--color-on-surface);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.12s, box-shadow 0.12s;
+}
+.wiz-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(108, 60, 224, 0.2);
+}
+.wiz-help { margin: 0; font-size: 12px; color: var(--color-on-surface-variant); }
+
+.wiz-result {
+    padding: 10px 12px;
+    font-size: 13px;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface-container-low);
+}
+.wiz-result--ok  { border-left-color: var(--color-success); background: var(--color-success-bg); color: var(--color-success); }
+.wiz-result--bad { border-left-color: var(--color-error);   background: var(--color-error-bg);   color: var(--color-error); }
+
+/* ---------- Actions ---------- */
+.wiz-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-surface-container);
+    margin-top: 4px;
+    padding-top: 16px;
+}
+.wiz-actions--center { justify-content: center; }
+.wiz-actions > div   { display: flex; gap: 8px; }
+
+.wiz-btn {
+    appearance: none;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--color-on-surface);
+    transition: background-color 0.12s, color 0.12s, border-color 0.12s;
+}
+.wiz-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.wiz-btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+.wiz-btn--primary:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+}
+.wiz-btn--ghost {
+    background: var(--color-surface-container-lowest);
+    color: var(--color-on-surface);
+    border-color: var(--color-outline-variant);
+}
+.wiz-btn--ghost:hover:not(:disabled) {
+    background: var(--color-surface-container-low);
+}
+.wiz-btn--lg {
+    padding: 12px 28px;
+    font-size: 14px;
+}
+
+/* ---------- Tasks list (finalize) ---------- */
+.wiz-tasks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--color-surface-container);
+}
+.wiz-task {
+    display: grid;
+    grid-template-columns: 24px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--color-surface-container);
+    font-size: 13px;
+}
+.wiz-task:last-child { border-bottom: none; }
+.wiz-task-icon {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-outline-variant);
+    background: var(--color-surface-container-lowest);
+}
+.wiz-task-label { color: var(--color-on-surface); font-weight: 500; }
+.wiz-task-state {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-on-surface-variant);
+}
+.wiz-task--running .wiz-task-icon {
+    border-color: var(--color-primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: wiz-spin 0.8s linear infinite;
+}
+.wiz-task--running .wiz-task-state { color: var(--color-primary); }
+.wiz-task--ok .wiz-task-icon {
+    background: var(--color-success);
+    border-color: var(--color-success);
+    position: relative;
+}
+.wiz-task--ok .wiz-task-icon::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.wiz-task--ok .wiz-task-state { color: var(--color-success); }
+.wiz-task--bad .wiz-task-icon {
+    background: var(--color-error);
+    border-color: var(--color-error);
+    position: relative;
+}
+.wiz-task--bad .wiz-task-icon::before,
+.wiz-task--bad .wiz-task-icon::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 2px;
+    height: 12px;
+    background: #fff;
+}
+.wiz-task--bad .wiz-task-icon::before { transform: rotate(45deg); }
+.wiz-task--bad .wiz-task-icon::after  { transform: rotate(-45deg); }
+.wiz-task--bad .wiz-task-state { color: var(--color-error); }
+
+@keyframes wiz-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Done ---------- */
+.wiz-done { align-items: center; text-align: center; }
+.wiz-done-mark {
+    width: 64px;
+    height: 64px;
+    background: var(--color-success);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 4px auto 4px;
+}
+.wiz-done-mark--info { background: var(--color-primary); }
+
+/* ---------- Footer ---------- */
+.wiz-footer {
+    color: var(--color-on-surface-variant);
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-top: 8px;
+}
+.wiz-footer-sep { opacity: 0.6; }
+.wiz-footer-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+.wiz-footer-link:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+    .wiz-body { padding: 20px 16px; }
+    .wiz-info-grid, .wiz-form-grid { grid-template-columns: 1fr; }
+    .wiz-steps { padding: 12px 16px; }
+    .wiz-step-label { display: none; }
+    .wiz-actions { flex-direction: column-reverse; align-items: stretch; }
+    .wiz-actions > div { flex-direction: column-reverse; }
+    .wiz-btn { width: 100%; text-align: center; }
+}

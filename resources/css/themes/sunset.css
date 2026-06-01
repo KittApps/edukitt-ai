@@ -1,0 +1,20 @@
+.theme-sunset {
+  --color-primary: #ea580c;
+  --color-primary-container: #fdba74;
+  --color-secondary: #e11d48;
+  --color-secondary-container: #fecdd3;
+  --color-tertiary: #ca8a04;
+  --color-error: #b91c1c;
+  --color-error-container: #fecaca;
+
+  --color-surface: #fff8f3;
+  --color-surface-dim: #fde8d6;
+  --color-surface-container: #fcd5b8;
+  --color-surface-container-low: #ffefe0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #fac598;
+  --color-on-surface: #2b1909;
+  --color-on-surface-variant: #6b4f37;
+  --color-outline-variant: #d4a37b;
+  --color-surface-variant: #f0c799;
+}
